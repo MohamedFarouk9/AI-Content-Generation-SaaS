@@ -1,5 +1,6 @@
 <?php
 
+use App\Modules\AI\Controllers\AiController;
 use Illuminate\Support\Facades\Route;
 use App\Modules\Identity\Controllers\AuthController;
 use App\Modules\Identity\Controllers\OAuthController;
@@ -16,4 +17,5 @@ Route::middleware('web')->group(function () {
 Route::middleware(['web', 'auth'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/user', [AuthController::class, 'user'])->name('user');
+    
 });

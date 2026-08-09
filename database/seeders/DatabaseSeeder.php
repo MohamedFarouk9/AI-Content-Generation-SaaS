@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             OrganizationSeeder::class,
+            AiModelSeeder::class,
+            AiRequestSeeder::class,
         ]);
     }
 }
